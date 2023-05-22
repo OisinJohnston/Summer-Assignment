@@ -1,0 +1,49 @@
+.form {
+	display: block;
+	width: 500px;
+	margin: auto;
+	border: solid;
+	padding: 10px;
+}
+
+
+.formsection {
+	display: inline;
+	width: 50%;
+}
+
+#labels {
+	float: left;
+}
+
+#inputs {
+	float: right;
+}
+
+#inputs input {
+	float: left;
+	width: 100%;
+	padding: 0;
+	display: block;
+}
+
+#labels label {
+	float: right;
+}
+
+.box {
+	height 10px;
+	border:solid;
+}
+
+
+.form button {
+	width: 100%;
+}
+
+.heading {
+	text-align: center;
+	border: solid;
+	width: 510px;
+	margin: auto;
+}

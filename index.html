@@ -5,31 +5,53 @@
 		<link rel="stylesheet" href="./styles.css"/>
 	</head>
 	<body>
+		<div class="heading">
+			<h1>Luhn's Number Calculator</h1>
+		</div>
+		<br/>
 		<div class="form">
 				<form>
 					<div class="formsection" id="labels">
+						<div class="box">
 						<label for="fullname">Full Name (as on card): </label><br/>
+						</div>
+						<div class="box">
 						<label for="address">Billing Address: </label><br/>
+						</div>
+						<div class="box">
 						<label for="email">Email: </label><br/>
+						</div>
+						<div class="box">
 						<label for="phone">Phone Number (international): </label><br/>
+						</div>
+						<div class="box">
 						<label for="cc_number">Credit Card Number: </label><br/>
+						</div>
+						<div class="box">
 						<label for="cvv_number">CVV: </label><br/>
+						</div>
 					</div>
 					<div class="formsection" id="inputs">
+						<div class="box">
 							<input id="fullname" name="fullname" type="text" required>
-							<br/>
+						</div>
+						<div class="box">
 							<input id="address" type="text" required>
-							<br/>
+						</div>
+						<div class="box">
 							<input id="email" type="email" required>
-							<br/>
+						</div>
+						<div class="box">
 							<input type="tel" id="phone" name="phone" pattern="\+(9[976]\d|8[987530]\d|6[987]\d|5[90]\d|42\d|3[875]\d|
 				2[98654321]\d|9[8543210]|8[6421]|6[6543210]|5[87654321]|
-				4[987654310]|3[9643210]|2[70]|7|1)\d{1,14}$" required>
-							<br/>
-							<input type="cc_number" type="text" pattern="[0-9]{13,19}" required>
-							<br/>
+				4[987654310]|3[9643210]|2[70]|7|1)\d{1,14}$" required>	
+						</div>
+						<div class="box">
+							<input type="cc_number" type="text" pattern="[0-9]{13,19}" required>	
+						</div>
+						<div class="box">
 							<input type="text" pattern="[0-9]{3,4}" required>
-							<br/>
+						</div>
 					</div>
 					<br/>
 					<button type="submit">submit</button>
