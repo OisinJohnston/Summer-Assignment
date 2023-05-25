@@ -1,6 +1,9 @@
+let cc_num;
+let cvv;
+
 addEventListener("DOMContentLoaded", (e) => {
-	let cc_num = document.getElementById('cc_number');
-	let cvv = document.getElementById('cvv');
+	cc_num = document.getElementById('cc_number');
+	cvv = document.getElementById('cvv');
 	[document.getElementById('phone'), cc_num, cvv].forEach((x) => {
 		x.addEventListener('keypress', (e) => {
 			code = (e.keyCode ? e.keyCode : e.which);
@@ -25,11 +28,23 @@ function check_luhns() {
 		var n = value*2;
 		if (n>9) {n-=9};
 		check_num += n;
-	}
+	})
 	
 	return check_num%10==0;
 }
 
 function verify_number() {
+	if (!check_luhns()) {
+		alert("Invalid Card Number :(");
+		document.body.style.backgroundColor = 'red';
+		return
+	}
+	[
+			[/^4([0-9]{13}|[0-9]{16})/g, 'Visa']
+	].forEach((x) => { 
+		if (x[0].test(cc_num.value)) {
+			alert("Valid Card Number of type : "+x[1])
+		}	
+	})
 	
 }
